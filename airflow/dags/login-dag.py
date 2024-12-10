@@ -71,7 +71,8 @@ def parse_sql_file(**kwargs):
                 sql_statements.append(sql)
 
     # Push SQL statements to XCom for the next task
-    kwargs['ti'].xcom_push(key='parsed_sql', value=sql_statements)
+    parsed_sql = "; ".join(sql_statements)
+    kwargs['ti'].xcom_push(key='parsed_sql', value=parsed_sql)
 
 # Define the DAG
 default_args = {
