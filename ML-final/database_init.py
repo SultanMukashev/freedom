@@ -27,6 +27,9 @@ def populate_database(database_file):
 
         # Create tables
         # cursor.execute("DROP TABLE ATTENDANCE")
+        # cursor.execute("DROP TABLE students")
+        # cursor.execute("DROP TABLE enrollment")
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS students (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
