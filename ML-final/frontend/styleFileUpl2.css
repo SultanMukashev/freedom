@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.content{
+    position: relative;
+    margin:0;
+}
+
+.popup {
+    font-family: 'Arial', sans-serif;
+    width: 50%;
+    position: absolute;
+    color: #333;
+    left: 25%;
+    top:40%;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup ::selection{
+    color: #fff;
+    background: #535987;
+}
+.popup .wrapper {
+    width: 430px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}
+
+.popup .wrapper header{
+    color: #535987;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popup .wrapper form{
+    height: 167px;
+    display: flex;
+    cursor: pointer;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #535987;
+}
+.popup form :where(i, p){
+    color: #535987;
+}
+.popup form i{
+    font-size: 50px;
+}
+.popup form p{
+    margin-top: 15px;
+    font-size: 16px;
+}
+.popup button.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0 20px;
+    background-color: #535987;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.popup .close-btn {
+    position: relative;
+    margin-left: 95%;
+    top: 0px;
+    left: 0px;
+    font-size: 40px;
+    cursor: pointer;
+}
+button.submit-btn:hover {
+    background-color: #404478;
+}
+section .row{
+    /* margin-bottom: 10px; */
+    margin: 10px;
+    background: #e9f0ff;
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .row i{
+    color: #6990f2;
+    font-size: 30px;
+}
+section .details span{
+    font-size: 14px;
+}
+.progress-area .row .content{
+    width: 100%;
+    margin-bottom: 7px;
+}
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+    height: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+    background: #fff;
+    border-radius: 30px;
+}
+.content .progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #535987;
+    border-radius: inherit;
+}
+header {
+    width: 100%;
+    background-color: #1a225e;
+    padding: 15px 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.popup h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.uploaded-area{
+    max-height: 232px;
+    overflow-y: scroll;
+}
+.uploaded-area.onprogress{
+    max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar{
+    width: 0px;
+}
+.uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+}
+.uploaded-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    padding: 0px 10px ;
+    flex-direction: column;
+}
+.uploaded-area .row .details .size{
+    color: #404040;
+    font-size: 11px;
+}
+.uploaded-area i.fa-check{
+    font-size: 16px;
+}
+.uploaded-area .row .delete-btn {
+    color: #ff4d4d;
+    font-size: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.uploaded-area .row .delete-btn:hover {
+    color: #d93636;
+}

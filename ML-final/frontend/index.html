@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Student Attendance</title>
+</head>
+<body>
+    <header>
+        <h1>SDU University</h1>
+    </header>
+    <!-- FileUploader -->
+    <div class="sidebar">
+        <link rel="stylesheet" href="teacher.css">
+        <img src="220107037/IMG_6339.jpg" alt="Student Photo">
+        <div class="teacher-info">
+            <h3>Akhmetbek Yernar</h3>
+            <p>Position: Lecturer</p>
+            <p>Email: yernar.akhmetbek@sdu.edu.kz</p>
+        </div>
+        <ul class="subjects">
+            <li onclick="fetchAndShowAttendance('CSS324',dates)">Machine Learning</li>
+        </ul>
+        <button class="logout-btn">Logout</button>
+        <button class="logout-btn" id='reg' onclick="openRegisterPopup()">Register</button>
+        
+        
+    </div> 
+    <div class="content">
+        <h2>Attendance Management</h2>
+        <div class="attendance" id="attendance">
+            Select a subject.
+        </div>
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="styleFileUpl2.css">
+        <div id="fileUploaderPopup" class="popup" style="display: none;">
+            <div class="wrapper">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2 id="popupTitle">File Upload</h2>
+                <input type="text" id="student-id" placeholder="Enter Student ID" required>
+                <!-- SDU Header -->
+                <!-- File Upload Form -->
+                <form action="#">
+                    <input class="file-input" type="file" name="file" accept="image/*" hidden>
+                    <i class="fa fa-cloud-upload"></i>
+                    <p>Browse File to Upload</p>
+                    <div class="loader" style="display: none;"></div>
+                </form>
+                
+                <!-- Submit Button -->
+                <button class="submit-btn" id="submitBtn">Submit Files</button>
+        
+                <!-- File Progress Area -->
+                <section class="progress-area"></section>
+                
+                <!-- Uploaded Files Area -->
+                <section class="uploaded-area"></section>
+            </div>
+        </div>
+        <div id="fileUploaderPopup" class="popup" style="display: none;">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <div class="wrapper">
+                <form id="registrationForm" style="display: none;">
+                    <input class="file-input" type="file" name="file" hidden multiple>
+                    <i class="fa fa-cloud-upload"></i>
+                    <p>Browse Files to Upload</p>
+                </form>
+                <button class="submit-btn" id="submitBtn" onclick="submitForm()">Submit Files</button>
+                <section class="progress-area"></section>
+                <section class="uploaded-area"></section>
+            </div>
+        </div>
+    </div>
+    <style>
+        
+    </style>
+
+
+    <script src="script.js">
+    </script>
+</body>
+</html>

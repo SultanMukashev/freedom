@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #ecedf3;
+}
+
+header {
+    width: 100%;
+    background-color: #1a225e;
+    padding: 15px 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background-color: #535987;
+    color: white;
+    border: none;
+    padding: 8px 30px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
+    height: 36px;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #ff9800; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    left: 50%;
+    top: 50%;
+	position: fixed;
+  }
+.visible {
+    display: block;
+}
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.sidebar {
+    width: 30%;
+    background-color: #f4f4f4;
+    padding: 50px;
+    border-right: 1px solid #ccc;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar img {
+    width: 110px;
+    height: 170px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+}
+
+.teacher-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subjects {
+    list-style: none;
+    padding: 0;
+}
+
+.subjects li {
+    padding: 10px;
+    background: #e8e8e8;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.subjects li:hover {
+    background: #d0d0d0;
+}
+
+.content {
+    width: 70%;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+
+.attendance {
+    font-size: 1.2em;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.set-attendance-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #535987;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.set-attendance-btn.active {
+    background-color: #ff9800; /* Highlight color */
+    color: white;
+    border: 2px #1a225e;
+
+}
+
+.table-container {
+    /* max-height: 400px; */
+    height: 80%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#attendance-table th,
+#attendance-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#attendance-table th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.toggle {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.green-check {
+    color: green;
+}
+
+.red-cross {
+    color: red;
+}
+
+.blue-reason {
+    color: blue;
+    font-size: 14px;
+    font-style: bold;
+    margin: 5px 0 0;
+}
+
+.btn-container {
+    margin-top: 10px;
+    text-align: center;
+}
