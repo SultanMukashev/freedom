@@ -9,14 +9,16 @@ stock_schema = StructType([
     StructField('price', DoubleType(), True),
     StructField('timestamp', TimestampType(), True)
 ])
-
+kafka_topic_name = 'stock-prices'
+kafka_bootstrap_servers = ['localhost:9092']
 # Initialize Spark Session
 spark = SparkSession \
     .builder \
     .appName("StockPriceAnalysis") \
+    .config("spark.jars", "/opt/spark/jars/spark-sql-kafka-0-10_2.12-3.5.0.jar,/opt/spark/jars/kafka-clients-3.5.0.jar") \
     .getOrCreate()
 
-# Read messages from Kafka
+# Read messages from Kafkapip
 raw_stock_data = spark \
     .readStream \
     .format("kafka") \
@@ -46,5 +48,5 @@ query = average_stock_price \
     .outputMode("complete") \
     .format("console") \
     .start()
-
+print(query)
 query.awaitTermination()
